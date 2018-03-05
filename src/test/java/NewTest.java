@@ -45,8 +45,7 @@ public class NewTest {
     }
 
     @Test
-    public void f()
-    {
+    public void testClass(){
         System.out.println("heloo");
         By inputBox = By.id("kw");
         By searchButton = By.id("su");
@@ -57,7 +56,6 @@ public class NewTest {
         intelligentWait(driver, 10, searchButton);
         driver.findElement(inputBox).sendKeys("中国");
         driver.findElement(searchButton).click();
-
     }
 
 
@@ -70,8 +68,6 @@ public class NewTest {
                     return element.isDisplayed();
                 }
             });
-
-
         } catch (TimeoutException e) {
             Assert.fail("超时L !! " + timeOut + " 秒之后还没找到元素 [" + by + "]", e);
         }
