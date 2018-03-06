@@ -11,12 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
-
+//@Listeners({com.hcb.test.core.listener.PowerEmailableReporter.class,com.hcb.test.core.listener.TestResultListener.class,com.hcb.test.core.listener.RetryListener.class})
 public class NewTest {
 
     private WebDriver driver;
@@ -33,7 +31,7 @@ public class NewTest {
         options.addArguments("--start-maximized");
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
         driver = new ChromeDriver(capabilities);
-//        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+//        driver = new RemoteWebDriver(new URL("http://172.16.90.217:4444/wd/hub"), capabilities);
         driver.manage().window().maximize();
 
         driver.get("http://www.baidu.com");
@@ -41,11 +39,16 @@ public class NewTest {
 
     @AfterTest
     public void afterTest(){
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         driver.quit();
     }
 
     @Test
-    public void testClass(){
+    public void testClass() {
         System.out.println("heloo");
         By inputBox = By.id("kw");
         By searchButton = By.id("su");
