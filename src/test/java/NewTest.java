@@ -53,6 +53,7 @@ public class NewTest {
         By inputBox = By.id("kw");
         By searchButton = By.id("su");
 
+        
         //智能等待元素加载出来
         intelligentWait(driver, 10, inputBox);
         //智能等待元素加载出来
