@@ -3,9 +3,8 @@
     <test name="Test">
 
         <classes>
-            <class name="NewTest">
-
-            </class>
+            <class name="NewTest"></class>
+            <class name="RealWaybillTest"></class>
         </classes>
     </test>
 
