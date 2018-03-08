@@ -3,13 +3,7 @@
     <test name="Test">
         <classes>
             <class name="NewTest"></class>
-            <class name="RealWaybillTest"></class>
+            <!--<class name="NewTest2"></class>-->
         </classes>
     </test>
-
-    <!--<listeners>-->
-    <!--<listener class-name="com.hcb.test.core.listener.PowerEmailableReporter" />-->
-    <!--<listener class-name="com.hcb.test.core.listener.TestResultListener" />-->
-    <!--<listener class-name="com.hcb.test.core.listener.RetryListener" />-->
-    <!--</listeners>-->
 </suite>

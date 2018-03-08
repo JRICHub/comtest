@@ -7,7 +7,7 @@ public class RealWaybillTest {
     @Test
     public void getDistanceTest(){
         //104.657623,30.58501
-       distance =  RealWaybill.getDistance(120.371262,36.076049, 119.918534,36.302146  );
+       distance =  RealWaybill.getDistance(104.06774,30.54005, 88.876578,29.264941  );
        System.out.println(distance);
     }
 
