@@ -50,7 +50,7 @@ public class NewTest2 {
         intelligentWait(driver, 10, inputBox);
         //智能等待元素加载出来
         intelligentWait(driver, 10, searchButton);
-        driver.findElement(inputBox).sendKeys("中国地图");
+        driver.findElement(inputBox).sendKeys("放假旅游");
         driver.findElement(searchButton).click();
     }
 
