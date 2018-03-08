@@ -41,7 +41,7 @@ public class NewTest2 {
     }
 
     @Test
-    public void testClass() {
+    public void testClass2() {
         driver.get("http://www.baidu.com");
         System.out.println("heloo");
         By inputBox = By.id("kw");
