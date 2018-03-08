@@ -39,30 +39,30 @@
             </plugin>
 
             <!-- 添加插件 关联testNg.xml  ，surefire插件其实就是一个容器-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.17</version>
-                <configuration>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-surefire-plugin</artifactId>-->
+                <!--<version>2.17</version>-->
+                <!--<configuration>-->
 
-                    <!-- 有疑问 ，加上这段代码就没有多余的report文件了-->
-                    <!-- 添加插件,添加ReportNg的监听器，生成TestNg的报告 -->
-                    <properties>
-                        <property>
-                            <name>usedefaultlisteners</name>
-                            <value>false</value>
-                        </property>
-                        <property>
-                            <name>listener</name>
-                            <value>org.uncommons.reportng.HTMLReporter</value>
-                        </property>
-                    </properties>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>res/testNG.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                    <workingDirectory>target/</workingDirectory>
-                </configuration>
-            </plugin>
+                    <!--&lt;!&ndash; 有疑问 ，加上这段代码就没有多余的report文件了&ndash;&gt;-->
+                    <!--&lt;!&ndash; 添加插件,添加ReportNg的监听器，生成TestNg的报告 &ndash;&gt;-->
+                    <!--<properties>-->
+                        <!--<property>-->
+                            <!--<name>usedefaultlisteners</name>-->
+                            <!--<value>false</value>-->
+                        <!--</property>-->
+                        <!--<property>-->
+                            <!--<name>listener</name>-->
+                            <!--<value>org.uncommons.reportng.HTMLReporter</value>-->
+                        <!--</property>-->
+                    <!--</properties>-->
+                    <!--<suiteXmlFiles>-->
+                        <!--<suiteXmlFile>res/testNG.xml</suiteXmlFile>-->
+                    <!--</suiteXmlFiles>-->
+                    <!--<workingDirectory>target/</workingDirectory>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
             <!--这里要将defaultListener设置为false，下面配置了两个listener，一个是HTMLReport，用来生成HTML格式的Report，
 另一个是JUnitXMLReporter，这个是用来生成xml格式的report，用于jekins服务器;practice11.xml即为即将运行的TestNG xml。
 然后运行maven test，生成的报告会在target/目录下。
